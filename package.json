@@ -14,10 +14,10 @@
   "author": "https://github.com/Obmoroz",
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "https://github.com/Obmoroz/WebStart.git"
   },
   "bugs": {
-    "url": ""
+    "url": "https://github.com/Obmoroz/WebStart/issues"
   },
   "keywords": [
     "webpack",
