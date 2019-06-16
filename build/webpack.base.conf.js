@@ -11,6 +11,7 @@ const devMode = process.env.NODE_ENV !== 'production';
 
 const PATHS = {
     src: path.join(__dirname, './src'),
+    dist: path.join(__dirname, '../src'),
     cabinet: path.join(__dirname, './src/js/cabinet'),
     public: path.join(__dirname, './public'),
     assets: path.join(__dirname, './public/assets'),
@@ -38,10 +39,11 @@ module.exports = {
     },
     module: {
         rules: [
-            /* {
-                 test: require.resolve(__dirname + ""),
-                 loader: "imports-loader?this=>window"
-             },*/
+            {
+                test: /test\.js$/,
+                use: 'mocha-loader',
+                exclude: /node_modules/
+            },
             {
                 test: /\.css$/,
                 use: [
